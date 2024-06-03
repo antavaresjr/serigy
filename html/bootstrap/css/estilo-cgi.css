@@ -1,0 +1,128 @@
+body, p, h1, input {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 100vh;
+  height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  text-align: left;
+  background-color: #333; /* Cor de fundo sólida */
+  padding: 10px;
+  border-top-left-radius: 10px; /* Bordas superiores arredondadas */
+  border-top-right-radius: 10px;
+  margin-bottom: 0; /* Remove a margem inferior para colar o formulário */
+  color: #ffffff;
+}
+
+p {
+  text-align: left;
+  color: #000000;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Alinha o formulário verticalmente */
+  background-color: #ffffff; /* Cor de fundo sólida igual ao título */
+  padding: 20px;
+  border-bottom-left-radius: 10px; /* Bordas inferiores arredondadas */
+  border-bottom-right-radius: 10px;
+  border-top: 1px solid #fff; /* Linha separando o título do formulário */
+}
+
+.form-container label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Espaço entre o input e o botão */
+}
+
+.form-container input[type="file"] {
+  display: none; /* Esconde o input original */
+}
+
+.form-container button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container label:hover,
+.form-container button:hover {
+  background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+#file-name {
+  color: #000000; /* Cor do texto do nome do arquivo */
+  margin-bottom: 10px;
+}
+
+.conteudo {
+  border: 1px solid #ccc; /* Adiciona uma borda sólida cinza */
+  border-radius: 10px; /* Adiciona cantos arredondados */
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+  color: #f7f8fa;
+  padding: 20px; /* Adiciona espaço interno ao redor do conteúdo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+  margin: 20px; /* Adiciona espaço ao redor do conteúdo */
+  width: calc(100% - 240px); /* Largura disponível */
+  box-sizing: border-box; /* Inclui padding e bordas na largura */
+  display: flex;
+  flex-direction: column; /* Alinha itens verticalmente */
+  align-items: center; /* Centraliza itens horizontalmente */
+}
+
+.header-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco sólido */
+  border-radius: 10px; /* Cantos arredondados */
+  padding: 10px 20px; /* Espaço interno ao redor do texto */
+  margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+  width: 100%; /* Largura total do contêiner */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+.content-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo branco sólido */
+  border-radius: 10px; /* Cantos arredondados */
+  padding: 20px; /* Espaço interno ao redor do texto */
+  width: 100%; /* Largura total do contêiner */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+textarea {
+  width: 100%; /* Faz o textarea ocupar toda a largura */
+  border-radius: 5px; /* Adiciona cantos arredondados ao textarea */
+  padding: 10px; /* Adiciona espaço interno ao textarea */
+  box-sizing: border-box; /* Inclui padding e bordas na largura */
+}
+
+/* Adicionando estilo para o botão de retorno */
+button.retornar {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Espaço acima do botão */
+}
+
+button.retornar:hover {
+  background-color: #0056b3;
+}

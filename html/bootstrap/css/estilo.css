@@ -1,0 +1,98 @@
+body {
+    background: url(/bootstrap/img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-login {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px; /* Defina a largura da caixa de acordo com sua preferência */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Adiciona uma sombra suave */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin: 0 auto; /* Centraliza a caixa de login horizontalmente */
+}
+
+/* Estilos para os rótulos e inputs */
+.caixa-login label {
+    display: block; /* Coloca cada rótulo em uma nova linha */
+    margin-bottom: 10px; /* Adiciona espaço entre os rótulos */
+    font-weight: bold; /* Deixa os rótulos em negrito */
+    font-size: 14px; /* Define o tamanho da fonte dos rótulos */
+}
+
+.caixa-login input[type="text"],
+.caixa-login input[type="password"] {
+    width: calc(100% - 20px); /* Define a largura dos inputs */
+    padding: 8px; /* Adiciona um preenchimento interno aos inputs */
+    margin-bottom: 15px; /* Adiciona espaço entre os inputs */
+    font-size: 14px; /* Define o tamanho da fonte dos inputs */
+}
+
+.caixa-login input[type="submit"] {
+    width: 100%; /* Faz o botão ocupar toda a largura da caixa */
+    padding: 10px; /* Adiciona um preenchimento ao botão */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto branco */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar o mouse sobre o botão */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    font-weight: bold; /* Deixa o texto do botão em negrito */
+}
+
+.caixa {
+    background: rgba(red, green, blue, alpha);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 30px 15px;
+    border-radius: 3px;
+}
+
+.form-estilo {
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.titulo {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: larger;
+    font-family: 'Lucida Sans', sans-serif;
+    font-weight: bold; /* Deixa os rótulos em negrito */
+}
+
+.logo {
+    width: 50px; /* Defina a largura desejada para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Adiciona espaço à direita da imagem */
+    float: left;
+}
+
+.footer {
+    position: fixed; /* Alterado de "absolute" para "fixed" para manter o footer no rodapé, independentemente do scroll */
+    bottom: 0;
+    left: 50%; /* Posicionamento na metade da largura da página */
+    transform: translateX(-50%); /* Move o elemento de volta pela metade da sua própria largura, centrando-o */
+    z-index: 10;
+    font-family: 'Lucida Sans', sans-serif;
+    color: #ccc;
+}

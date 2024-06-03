@@ -1,0 +1,59 @@
+version: '3.3'
+
+services:
+
+  db:
+    build:
+      context: ./images/db
+      dockerfile: Dockerfile
+    image: antavaresjr/mariadb:0.0.042
+    command: --innodb-use-native-aio=0
+    container_name: db
+    restart: always
+    tty: true
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./volumes/db/mysql:/var/lib/mysql
+      - ./volumes/db/backup:/backup
+    environment:
+      - MYSQL_DATABASE=webapp
+      - MYSQL_USER=webapp_user
+      - MYSQL_PASSWORD=webapp_password
+      - MYSQL_ROOT_PASSWORD=senhadificildocabrunco
+    networks:
+      - net
+
+  webserver:
+    build:
+      context: ./images/webserver
+      dockerfile: Dockerfile
+    image: antavaresjr/webserver:0.0.042
+    volumes:
+      - ../cgi-bin:/usr/lib/cgi-bin
+      - ../html:/var/www/html
+    container_name: webserver
+    restart: always
+    tty: true
+    ports:
+      - "8080:80"
+    networks:
+      - net
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: dev_phpmysqladmin
+    restart: always
+    tty: true
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - "8081:80"
+    networks:
+      - net
+
+networks:
+  net:
+    driver: bridge
